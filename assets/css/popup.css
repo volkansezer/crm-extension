@@ -1,0 +1,16 @@
+body, html{
+    margin: 0px;
+}
+
+body{
+    min-width: 400px;
+}
+.container{
+    padding: 5px 0px;
+    background-size: cover;
+    background: url(../img/form-bg.jpeg)no-repeat bottom center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+}
