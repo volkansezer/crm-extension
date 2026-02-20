@@ -10,6 +10,10 @@ $(document).ready(function () {
 
 	main();
 
+	document.getElementById('refreshBtn').addEventListener('click', () => {
+		location.reload();
+	});
+
 });
 
 
