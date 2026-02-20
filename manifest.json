@@ -1,12 +1,10 @@
 {
 	"manifest_version": 3,
-	"name": "Servis CRM V1.0",
-	"version": "1.0.2",
+	"name": "Servis CRM V1.0.3",
+	"version": "1.0.3",
 	"description": "Servis CRM - GSPN'den Tekli kayıt çekme",
-	"author": {
-		"name": "Volkan Sezer",
-		"email": "volkan@serviscrm.com"
-	 },
+	"author": {"name": "Volkan Sezer", "email": "volkan@serviscrm.com"},
+
 	"permissions": ["storage", "tabs", "activeTab", "scripting", "alarms", "sidePanel", "contextMenus"],
 	
 	"icons": {
@@ -15,16 +13,20 @@
 		"48": "assets/img/icon-48.png",
 		"128": "assets/img/icon-128.png"
 	},
-	//"side_panel": {"default_path": "sidepanel.html"},
+
+	"side_panel": {"default_path": "popup.html"},
 	"background": {"service_worker": "background.js"},
+
 	"action": {
 		"default_popup": "popup.html",
 		"default_icon": "assets/img/icon-128.png"
 	},
+
 	"options_ui": {
 		"open_in_tab": true,
-		"page": "options.html"
-	 },
+		"page": "welcome.html"
+	},
+
 	"content_scripts": [
 		{
 			"matches": ["https://biz1.samsungcsportal.com/gspn/operate.do"],
