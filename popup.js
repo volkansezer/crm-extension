@@ -3,6 +3,7 @@ const divMain = document.querySelector('#divMain');
 const divForm = document.querySelector('#divForm');
 const spanDurum = document.querySelector('#spanDurum');
 var apiUrl = "";
+var apiEndpoint = "";
 
 
 
@@ -21,22 +22,23 @@ async function main() {
 
 	const [currentTab] = await chrome.tabs.query({ active: true, currentWindow: true });	//console.log(currentTab.url);
 
-	const result = await chrome.storage.local.get(['savedUrl']);
+	const result = await chrome.storage.local.get(['savedUrl', 'savedEndpoint']);
 
 
 	// Eğer savedUrl yoksa veya boş bir metinse
-	if (!result.savedUrl) {
+	if (!result.savedUrl || !result.savedEndpoint) {
 		console.log("Hata: Kayıtlı URL bulunamadı!");
 		spanDurum.innerHTML = '> API URL girilmedi!';
 		return false;
 	}
 
-	if (result.savedUrl == '' || result.savedUrl == null) {
+	if (result.savedUrl == '' || result.savedUrl == null || result.savedEndpoint == '' || result.savedEndpoint == null) {
 		spanDurum.innerHTML = '> API URL eskik veya hatalı!';
 		return false;
 	}
 
-	apiUrl = `https://${result.savedUrl}/api/ext/`;
+	//apiUrl = `https://${result.savedUrl}`;
+	apiUrl = `https://${result.savedUrl}/${result.savedEndpoint}`;
 
 	if (!currentTab.url.includes(result.savedUrl) && !currentTab.url.includes("samsungcsportal.com/gspn")) {
 		spanDurum.innerHTML = '> Doğru sayfada değiliz..!';
