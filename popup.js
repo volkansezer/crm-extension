@@ -71,6 +71,8 @@ async function main() {
 		return false;
 	}
 
+	
+
 	console.log("> Sayfadan bilgiler alınıyor");
 	spanDurum.innerHTML = "> Sayfadan bilgiler alınıyor...";
 
@@ -79,6 +81,8 @@ async function main() {
 	spanDurum.innerHTML = "> Sayfadan gelen bilgiler kontrol ediliyor...";
 	divMain.style.display = 'inline';
 
+	console.log("> böyle oluyorsa güzel");
+
 	if (!response.hasOwnProperty("status")) {
 		console.log('Gelen mesajda status yok');
 		divMain.innerHTML = '<div class="alert alert-danger" role="alert">Hay Aksi! Sayfadan bilgi alınamadı :(</div>';
@@ -86,7 +90,7 @@ async function main() {
 	}
 
 	if (!response.status) {
-		console.log('status false geldi')
+		console.log('status false geldi! Mesaj: ' + response.message);
 		divMain.innerHTML = '<div class="alert alert-warning" role="alert">' + response.message + '</div>';
 		return false;
 	}
@@ -94,7 +98,7 @@ async function main() {
 	console.log(response.data.merkezno.length);
 
 	if (response.data.merkezno.length != 10) {
-		console.log('merkezno boş veya hatalı')
+		console.log('merkezno boş veya hatalı');
 		divMain.innerHTML = '<div class="alert alert-warning" role="alert">Merkez No boş veya hatalı</div>';
 		return false;
 	}
