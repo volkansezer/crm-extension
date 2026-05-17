@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { width: 250px; font-family: Arial, sans-serif; padding: 10px; margin: 0; }
+    h3 { margin-top: 0; color: #333; }
+    #sonuc { padding: 8px; background: #f3f3f3; border-radius: 4px; word-break: break-word; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <button id="refreshBtn" onclick="location.reload()">YENİLE</button>
+  <div id="sonuc">Veri aranıyor...</div>
+  <div>İşemri No: <div id="isemriNo"></div></div>
+  <div>Müşteri Adı: <div id="musteriAdi"></div></div>
+  
+  <!-- Popup içindeki butonlar ve mantık için JS dosyamız -->
+  <script src="popup.js"></script>
+</body>
+</html>
