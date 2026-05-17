@@ -1,0 +1,39 @@
+//https://gsfsplus-eu.lge.com/nxui/index.html
+//https://gsfsplus-eu.lge.com/nxui/
+
+console.log('LG.js');
+
+/*
+
+İş Emri
+MainFrame_mainVframeset_workVframeset_mdiFrameset_MENU00000_form_divMain_divWork_serviceReceiptNo_input
+
+Model
+MainFrame_mainVframeset_workVframeset_mdiFrameset_MENU00000_form_divMain_divWork_modelCode_input
+
+Seri
+MainFrame_mainVframeset_workVframeset_mdiFrameset_MENU00000_form_divMain_divWork_serialNo_input
+
+Müşteri Adı Soyadı
+MainFrame_mainVframeset_workVframeset_mdiFrameset_MENU00000_form_divMain_divWork_customerName_input
+
+
+Telefon
+MainFrame_mainVframeset_workVframeset_mdiFrameset_MENU00000_form_divMain_divWork_phoneNo_input
+
+Cep Telefonu
+MainFrame_mainVframeset_workVframeset_mdiFrameset_MENU00000_form_divMain_divWork_cellularNo_input
+
+sehir adi: İlçe
+MainFrame_mainVframeset_workVframeset_mdiFrameset_MENU00000_form_divMain_divWork_cityName_input
+
+
+Müşteri Adresi
+MainFrame_mainVframeset_workVframeset_mdiFrameset_MENU00000_form_divMain_divWork_address_input
+
+Açıklama
+MainFrame_mainVframeset_workVframeset_mdiFrameset_MENU00000_form_divMain_divWork_receiptDetail_input
+
+
+
+*/

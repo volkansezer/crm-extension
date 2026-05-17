@@ -40,7 +40,11 @@ async function main() {
 	//apiUrl = `https://${result.savedUrl}`;
 	apiUrl = `https://${result.savedUrl}/${result.savedEndpoint}`;
 
-	if (!currentTab.url.includes(result.savedUrl) && !currentTab.url.includes("samsungcsportal.com/gspn")) {
+	if (
+		!currentTab.url.includes(result.savedUrl) &&
+		!currentTab.url.includes("samsungcsportal.com/gspn") &&
+		!currentTab.url.includes("gsfsplus-eu.lge.com/nxui")
+	) {
 		spanDurum.innerHTML = '> Doğru sayfada değiliz..!';
 		//divMain.style.display='inline';
 		//divMain.innerHTML='Sevemedim kara gözlüm!';
@@ -76,6 +80,7 @@ async function main() {
 	console.log("> Sayfadan bilgiler alınıyor");
 	spanDurum.innerHTML = "> Sayfadan bilgiler alınıyor...";
 
+	console.log(currentTab.url);
 	const response = await chrome.tabs.sendMessage(currentTab.id, { action: "check", data: "merkezno" });
 	console.log(response);
 	spanDurum.innerHTML = "> Sayfadan gelen bilgiler kontrol ediliyor...";
